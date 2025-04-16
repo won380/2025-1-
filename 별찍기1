@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+
+int main()
+{
+	int n;
+	printf("n=");
+	scanf_s("%d", &n);
+
+	for (int i = 0; i < n; i++) //n행 반복
+	{
+		for (int j = 0; j < n; j++) //n열 반복
+		{
+			if (i == 0 || i == n - 1 || j == 0 || j == n - 1) 
+				// || = 논리연산자 or
+				//조건: 첫행, 마지막행, 첫열, 마지막열
+				printf("*"); //조건을 만족하면 *출력
+			else
+				printf(" ");
+		}
+		printf("\n");
+	}
+}
